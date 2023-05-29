@@ -181,8 +181,10 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	//MyForm obj;
 	//obj.ShowDialog();
 	string str = marshal_as<string>(textBox1->Text);
-	Game* game = new Game(str);
-	game->main();
+	if (str != "") {
+		Game* game = new Game(str);
+		game->main();
+	}
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	mainli* kj = new mainli();
