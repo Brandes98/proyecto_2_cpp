@@ -1,0 +1,8 @@
+juan 10000
+rodrigo 9700
+rodrigo 9700
+rodrigo 9700
+rodrigo 9700
+rodrigo 9700
+lucas 9940
+valor 9960
