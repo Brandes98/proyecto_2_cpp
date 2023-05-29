@@ -6,7 +6,7 @@ struct Mercado
 	double descuento;
 	bool estado = false;
 	int productos[5] = { 1,2,3,4,5 };
-	
+	int valores[5] = { 100,130,350,600,200 };
 	Boton* listaBotones[5] = { new Boton(),new Boton(),new Boton(),new Boton(),new Boton() };
 	ALLEGRO_BITMAP* mercadoImagen = al_load_bitmap("mercado.png");
 	ALLEGRO_FONT* letra = al_load_font("Macaroni.ttf", 20, 0);
@@ -26,11 +26,11 @@ struct Mercado
 			{
 				if (i == 4)
 				{
-					al_draw_text(letra, al_map_rgb(0, 0, 0), 0, 660 + (23 * (i + 1)), 0, "Producto: EspantaP" );
+					al_draw_text(letra, al_map_rgb(0, 0, 0), 0, 660 + (23 * (i + 1)), 0,( "Producto: EspantaP" + to_string(valores[i])).c_str());
 					
 				}
 				else {
-					al_draw_text(letra, al_map_rgb(0, 0, 0), 0, 660 + (23 * (i + 1)), 0, ("Producto: Arbol " + to_string(i)).c_str());
+					al_draw_text(letra, al_map_rgb(0, 0, 0), 0, 660 + (23 * (i + 1)), 0, ("Producto: Arbol " + to_string(valores[i])).c_str());
 
 				}
 				listaBotones[i]->x = 200;
